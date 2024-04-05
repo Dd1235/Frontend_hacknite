@@ -8,8 +8,8 @@ export const useDonation = () => {
 
   let url =
     process.env.NODE_ENV === "production"
-      ? `${process.env.BASE_URL}/api/donations`
-      : "";
+      ? `${process.env.REACT_APP_BASE_URL}/api/donations`
+      : "/api/donations";
 
   const submitForm = async (
     firstName,
