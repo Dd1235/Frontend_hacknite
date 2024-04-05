@@ -47,6 +47,7 @@ export default function PartnerForm() {
 
       const data = await response.json();
       console.log("Success:", data);
+      alert("Partner form submitted successfully");
       setError("");
     } catch (error) {
       console.error("Error:", error);
