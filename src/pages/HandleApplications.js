@@ -4,7 +4,6 @@ import DashList from "./DashList";
 import { Link } from "react-router-dom";
 import VolunteerPiChart from "../charts/VolunteerPiChart";
 import { updateApplicationData } from "../charts/data.js";
-import { base } from "../../../backend/models/volunteerModel.js";
 
 function MainPage() {
   const [isSidebar, setIsSidebar] = useState(false);
