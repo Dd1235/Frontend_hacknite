@@ -39,6 +39,10 @@ function MainPage(props) {
       ? `${process.env.REACT_APP_BASE_URL}`
       : "";
 
+  // const [currentView, setCurrentView] = useState(
+  //   localStorage.getItem("currentView") || "pending"
+  // );
+
   const fetchTotalAmount = async () => {
     try {
       const response = await fetch(`${base_url}/api/donations/totalAmount`);
@@ -218,6 +222,30 @@ function MainPage(props) {
 
     fetchData();
   }, [user]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("currentView", currentView);
+
+  //   switch (currentView) {
+  //     case "accepted":
+  //       setCurrent(acceptedApplications);
+  //       setHeading("Accepted Applications");
+  //       break;
+  //     case "rejected":
+  //       setCurrent(rejectedApplications);
+  //       setHeading("Rejected Applications");
+  //       break;
+  //     case "pending":
+  //     default:
+  //       setCurrent(pendingApplications);
+  //       setHeading("Pending Applications");
+  //       break;
+  //   }
+  // }, [currentView]);
+
+  // const changeView = (view) => {
+  //   setCurrentView(view); // This will trigger the useEffect above and also save the view to localStorage
+  // };
 
   if (isLoading)
     return (
