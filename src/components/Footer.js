@@ -66,11 +66,23 @@ export default function Footer() {
             <div className="uppercase text-sm lg:text-lg font-semibold mint-3-text dark:mint-1-text mb-2">
               Other Pages
             </div>
-            <li>OOPS page</li>
-            <li>Volunteer TY</li>
-            <li>Donation TY</li>
-            <li>Forgot Password</li>
-            <li>SUPER AWESOME THING</li>
+            <li>
+              <Link to="/oops">OOPS page</Link>
+            </li>
+            <li>
+              <Link to="/thank-you-volunteer">Volunteer TY</Link>
+            </li>
+            <li>
+              <Link to="/thank-you-donation">Donation TY</Link>
+            </li>
+            <li>
+              <Link to="/forgot-password">Forgot Password</Link>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+                SUPER AWESOME THING
+              </a>
+            </li>
           </ul>
         </div>
         <div className="text-2xl flex mint-1-text dark:mint-3-text gap-4">
