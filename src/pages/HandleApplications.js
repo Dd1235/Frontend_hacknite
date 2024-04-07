@@ -57,14 +57,12 @@ function MainPage(props) {
       return;
     }
     const difference = touchEndX - touchStartX;
-    if (difference > 50) {
+    if (difference > 200) {
       setIsSidebar(true); // Swipe right
       // console.log("Hi", difference);
-    } else if (difference < -50) {
+    } else if (difference < -200) {
       setIsSidebar(false); // Swipe left
       // console.log("hello", difference);
-    } else {
-      console.log(difference);
     }
   };
 
@@ -283,7 +281,11 @@ function MainPage(props) {
 
   const Main = () => {
     return (
-      <div>
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="dark:dark-bg">
           <button
             type="button"
@@ -458,13 +460,15 @@ function MainPage(props) {
                     Switch to {props.isDarkMode ? "Light Mode" : "Dark Mode"}
                   </span>
                 </button>
-                <button className=" flex lg:hidden w-full justify-center items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <button
+                  onClick={() => setIsSidebar(false)}
+                  className=" flex lg:hidden w-full justify-center items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
                   <i className="fa-solid fa-right-from-bracket  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                 </button>
               </ul>
             </div>
           </aside>
-
           <div className="p-4 lg:ml-64" onClick={() => setIsSidebar(false)}>
             <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
               <div className="flex items-center justify-center h-fit sm:h-32 mb-4 rounded">
@@ -579,15 +583,7 @@ function MainPage(props) {
     );
   };
 
-  return (
-    <div
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      {isApp ? <ApplicantCard /> : <Main />}
-    </div>
-  );
+  return <div>{isApp ? <ApplicantCard /> : <Main />}</div>;
 }
 
 export default MainPage;
