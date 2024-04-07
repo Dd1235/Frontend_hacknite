@@ -7,6 +7,7 @@ import { updateApplicationData } from "../charts/data.js";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
 import VolunteerDash from "../charts/VolunteerDash.js";
+import LogoutButton from "../components/LogoutButton.js";
 
 function MainPage(props) {
   const { user } = useAuthContext();
@@ -421,6 +422,7 @@ function MainPage(props) {
                     </span>
                   </button>
                 </li>
+                <LogoutButton />
                 <button
                   id="theme-toggle"
                   type="button"
