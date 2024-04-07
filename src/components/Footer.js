@@ -37,8 +37,8 @@ export default function Footer() {
             </div>
             <li>EduReach India Foundation</li>
             <li>123 Main Street, Bangalore</li>
-            <li>Rural India</li>
-            <li>Email: info@edureachindia.org</li>
+            <li>Rural India </li>
+            <li>Email: fruitygoosedeath@outlook.com</li>
             <li>Phone: +91 123 456 7890</li>
           </ul>
           <ul className="w-[30%] lg:w-[23%] flex flex-col justify-start items-start gap-1 lg:gap-3 text-sm lg:text-base">
@@ -64,13 +64,13 @@ export default function Footer() {
           </ul>
           <ul className="w-[30%] lg:w-[23%] flex flex-col justify-start items-start gap-1 lg:gap-3 text-sm lg:text-base">
             <div className="uppercase text-sm lg:text-lg font-semibold mint-3-text dark:mint-1-text mb-2">
-              Literacy Program
+              Other Pages
             </div>
-            <li>Literacy Programs</li>
-            <li>Teacher Training</li>
-            <li>Digital Learning Centers</li>
-            <li>Scholarships</li>
-            <li>Community Development</li>
+            <li>OOPS page</li>
+            <li>Volunteer TY</li>
+            <li>Donation TY</li>
+            <li>Forgot Password</li>
+            <li>SUPER AWESOME THING</li>
           </ul>
         </div>
         <div className="text-2xl flex mint-1-text dark:mint-3-text gap-4">
